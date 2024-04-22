@@ -1,0 +1,179 @@
+.headerWrapper {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.28);
+  margin-bottom: 120px;
+  z-index: 5;
+  .headerTop {
+    height: 100px;
+    width: 100%;
+    .headerLeftWrapper {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 100%;
+      .headerInfo {
+        color: #000;
+        margin-bottom: 0;
+        margin-left: 15px;
+      }
+    }
+    .searchArea {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      form {
+        position: relative;
+        display: flex;
+        width: 100%;
+        input {
+          width: 100%;
+          border-radius: 5px;
+          padding: 0 10px;
+          height: 34px;
+          border: 1px solid #333;
+          padding-right: 101px;
+          outline: unset;
+          box-shadow: 0 0 10px rgb(0 0 0 / 28%);
+        }
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100px;
+          height: 100%;
+          border-radius: 5px;
+          background-color: transparent;
+          color: #333;
+          border: 1px solid #333;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            background-color: #dddddd;
+          }
+        }
+      }
+      .searchAlert {
+        position: absolute;
+        top: calc(100% - 30px);
+        left: 0;
+        font-size: 12px;
+        color: #e20404;
+      }
+    }
+    .rightAreaWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      .pinArea {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #e20404;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: 0.3s linear;
+        &:hover {
+          box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3);
+        }
+        .pinsCount {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #e20404;
+          font-size: 10px;
+          background: #e20404;
+          border-radius: 50%;
+          top: -7px;
+          right: -10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.headerMiddle {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  border: 1px solid #3333332b;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  .menuItemBar {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    > span {
+      font-weight: 600;
+    }
+    .menuItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      height: 48px;
+      white-space: nowrap;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: #009fe3;
+      }
+    }
+  }
+}
+.headerBottom {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.28);
+  background-color: #fff;
+  .menuItemBar {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    > span {
+      font-weight: 600;
+    }
+    .menuItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      height: 48px;
+      white-space: nowrap;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: #009fe3;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .headerWrapper {
+    padding: 15px 0 20px;
+    .headerInfo {
+      font-size: 20px;
+    }
+    .searchAlert {
+      top: calc(100% - 3px) !important;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.flowMainWrapper {
+  .flowMainTitle {
+    font-size: 26px;
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  .flowContentWrapper {
+    max-height: 1858px;
+    overflow-y: auto;
+    > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+  .customFilterArea {
+    display: flex;
+    margin-bottom: 15px;
+    > div {
+      flex: 1;
+      margin-right: 5px;
+      select {
+        height: 30px;
+        width: 100%;
+        border-radius: 5px;
+        border-color: #000;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0 12px;
+    .flowMainTitle {
+      display: none;
+    }
+    .flowContentWrapper {
+      min-height: 464px;
+    }
+  }
+}

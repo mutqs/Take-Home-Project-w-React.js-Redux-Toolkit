@@ -1,0 +1,106 @@
+.horizontalCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  height: 182px;
+
+  .horizontalCardTop {
+    display: flex;
+    align-items: center;
+    .recommendTopLeftArea {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      .horizontalCardImage {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex: 0 0 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .addToFavouriteWrapper {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          cursor: pointer;
+        }
+      }
+      .pinArea {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #e20404;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: 0.3s linear;
+        &.active {
+          background-color: #e20404;
+          border-color: #e20404;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .horizontalCardBody {
+      height: 135px;
+      text-align: center;
+      flex: 1;
+      .title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        height: 42px;
+        overflow: hidden;
+      }
+      .source {
+        padding: 5px 15px 10px;
+        font-weight: 700;
+      }
+      .description {
+        padding: 0 10px;
+        font-size: 12px;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 54px;
+      }
+    }
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    background-color: #e20404;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
